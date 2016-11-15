@@ -36,7 +36,7 @@ String.prototype.isEmail = function () {
     }
 };
 String.prototype.isPhoneNumber = function () {
-    if (this.isEmpty() || (!/^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/.test(this))) {//格式不正确
+    if (this.isEmpty() || (!/^1([3-9][0-9]{9})$/.test(this))) {//格式不正确
         return false;
     } else {// 格式正确
         return true;
@@ -81,7 +81,7 @@ function JFuploadfile(args) {
     //准备参数
     var url, filePath, name, header, formData, successFunc, failFunc, completeFunc, file_type;
     if (!_checkReqParams(args)) {
-        throw new Error('Illegal param ' + args);
+        console.warn('Illegal param,input: ' + args);
     }
     url = args['url'] + '?';
     formData = args['formData'] || {};
@@ -132,7 +132,8 @@ function JFuploadfile(args) {
 function JFrequest(args) {
     //校验参数
     if (!_checkReqParams(args)) {
-        throw new Error('Illegal param ' + args);
+        console.warn('Illegal param,input: ' + args);
+        return;
     }
     //配置默认参数
     var url, param, header, method, successFunc, failFunc, completeFunc, utoken;

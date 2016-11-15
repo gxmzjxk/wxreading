@@ -2,14 +2,15 @@
 >[小程序跟读]
 
 ##项目介绍
-      本项目是基于<微信小程序>做的一套语音跟读，分为
-    【用户/登陆系统、查看教材、查看课程安排、参与跟读(录音/上传/合成)、结果展示】
-    等功能
+    本项目是基于<微信小程序>做的一套语音跟读，
+    分为【用户/登陆系统、查看教材、查看课程安排、参与跟读(录音/上传/合成)、结果展示】等功能
 ##开发/调试环境
-    微信版本：IOS-6.3.30
+    微信版本：6.3.30
+    IOS版本：IOS_10.0.2
     微信开发调试工具：v0.10.102800
     操作系统：Win7
     开发/调试：iPhone6S真机/微信工具预览，PHPstorm编码
+    
 ##使用过程遇到的坑丶记录
 1. 背景图不生效，改用image或者Base64
 2. 执行POST请求异常，将data中的JSON对象格式化为from序列
@@ -26,6 +27,7 @@ PS:怀疑是微信的坑，后来使用的是将其以GET方式提交，才正�
 目前未找到真实原因，是本人对for循环理解太浅？后通过额外加参数解决
 11. 微信录制的音频格式为.silk格式，具体可以Google，强大的ffmpeg都没法直接解码，最后使用了GitHub上的一个开源Decoder库，
 解码成功转成了MP3，感谢作者，地址：https://github.com/kn007/silk-v3-decoder
+
 ##未解之谜|改进方向
 1. for循环中的立即执行函数时间是完全一致的？
 2. 在页面切换的时候，切换到特定页面，需要先校验其是否登陆，然后跳转登陆页，结果真机上实践，几乎都是失败的
@@ -33,6 +35,18 @@ PS:怀疑是微信的坑，后来使用的是将其以GET方式提交，才正�
 4. 代码执行完之后，在回调中直接navigateTo或者redirectTo失败率很高，暂时用setTimeOut缓解。
 5. 下拉刷新的样式后期考虑自己定制，封装成方法
 6. 进一步扩充工具类，封装实用方法
+
+##真机预览图
+![p1](http://jfun.top/static/images/wxapp/p1.jpg)
+![p2](http://jfun.top/static/images/wxapp/p2.jpg)
+![p3](http://jfun.top/static/images/wxapp/p3.jpg)
+![p4](http://jfun.top/static/images/wxapp/p4.jpg)
+![p5](http://jfun.top/static/images/wxapp/p5.jpg)
+![p6](http://jfun.top/static/images/wxapp/p6.jpg)
+![p7](http://jfun.top/static/images/wxapp/p7.jpg)
+![p8](http://jfun.top/static/images/wxapp/p8.jpg)
+![p9](http://jfun.top/static/images/wxapp/p9.jpg)
+![p10](http://jfun.top/static/images/wxapp/p10.jpg)
 
 ##Connect Me
 ######email:  jxk854613@163.com

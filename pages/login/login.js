@@ -78,8 +78,11 @@ Page({
                                     cal(res.data.data);
                                 }
                             } else {
-                                console.log("请求数据失败，读取缓存");
-                                //
+                                wx.showToast({
+                                    title: '当前环境无法使用wx.login，请使用手机号登录',
+                                    icon: 'success',
+                                    duration: 3000
+                                });
                             }
                         }
                     });

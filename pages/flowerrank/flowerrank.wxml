@@ -1,0 +1,52 @@
+<!-- flower_container.wxml -->
+<view class="container flower_container">
+    <image src="images/img_reward_bg.png" class="flower-header-bg" background-size="contain"/>
+    <view class="flower-list-content">
+        <view class="fist-line-user">
+            <view class="fist-line-user-1">
+                <view class="user-portrait-1">
+                    <image class="user-rank-icon" src="images/img_reward_one.png"/>
+                </view>
+                <text class="user-name-1">Kate</text>
+                <text class="user-age-1">3岁两个月</text>
+                <text class="user-flowernum-1">100朵</text>
+            </view>
+            <view class="fist-line-user-2">
+                <view class="user-portrait-2">
+                    <image class="user-rank-icon" src="images/img_reward_two.png"/>
+                </view>
+                <text class="user-name-1">Kate</text>
+                <text class="user-age-1">3岁两个月</text>
+                <text class="user-flowernum-1">100朵</text>
+            </view>
+            <view class="fist-line-user-3">
+                <view class="user-portrait-2">
+                    <image class="user-rank-icon" src="images/img_reward_three.png"/>
+                </view>
+                <text class="user-name-1">Kate</text>
+                <text class="user-age-1">3岁两个月</text>
+                <text class="user-flowernum-1">100朵</text>
+            </view>
+        </view>
+        <view class="main-rank-list">
+            <view class="rank-item">
+                <text class="rank-item-pos">4</text>
+                <image class="rank-item-portrait" src=""></image>
+                <view class="rank-item-info">
+                    <text class="rank-item-info-name">Bubu</text>
+                    <text class="rank-item-info-age">三岁两个月</text>
+                </view>
+                <text class="rank-item-flowernum">99朵</text>
+            </view>
+        </view>
+    </view>
+    <view class="fixed-my-container">
+        <text class="fixed-my-index">我</text>
+        <image class="fixed-my-portrait" src=""/>
+        <view class="fixed-my-info">
+            <text class="fixed-my-info-pos">第5名</text>
+            <text class="fixed-my-info-beat">打败了95%的小飞侠</text>
+        </view>
+        <text class="fixed-my-flowernum">99朵</text>
+    </view>
+</view>

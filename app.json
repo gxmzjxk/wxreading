@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/flowerrank/flowerrank",
     "pages/login/login",
+    "pages/flowerrank/flowerrank",
     "pages/index/index",
     "pages/course/course",
     "pages/courseintro/courseintro",

@@ -54,6 +54,11 @@ Page({
                 }
             }
         });
+    },
+    tapShowFlowerRank : function () {
+        wx.navigateTo({
+            url: '../flowerrank/flowerrank'
+        })
     }
 
 });

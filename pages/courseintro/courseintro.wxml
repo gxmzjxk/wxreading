@@ -59,7 +59,11 @@
         </view>
     </view>
 
-    <view wx:if="{{course_status != 2}}" class="fixed_study_btn" bindtap="tapJoinReadingBtn">
+    <!--<view wx:if="{{course_status != 2}}" class="fixed_study_btn" bindtap="tapJoinReadingBtn">-->
+        <!--<text>做作业</text>-->
+    <!--</view>-->
+
+    <view class="fixed_study_btn" bindtap="tapJoinReadingBtn">
         <text>做作业</text>
     </view>
 

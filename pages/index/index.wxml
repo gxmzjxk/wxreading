@@ -17,7 +17,7 @@
             </view>
         </view>
     </block>
-    <view class="fixed-flower-rank">
+    <view class="fixed-flower-rank" bindtap="tapShowFlowerRank">
         <text>榜单</text>
     </view>
 </view>

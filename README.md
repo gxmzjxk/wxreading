@@ -44,6 +44,7 @@ PS:怀疑是微信的坑，后来使用的是将其以GET方式提交，才正�
 6. 进一步扩充工具类，封装实用方法
 
 ##真机预览图
+![p11](http://jfun.top/static/images/wxapp/p11.jpg)
 ![p1](http://jfun.top/static/images/wxapp/p1.jpg)
 ![p2](http://jfun.top/static/images/wxapp/p2.jpg)
 ![p3](http://jfun.top/static/images/wxapp/p3.jpg)

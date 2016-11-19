@@ -80,6 +80,10 @@
     box-sizing: border-box;
     font-size: 28rpx;
 }
+.mobile-login-content input{
+    display: block;
+    width: 10rem;
+}
 .mobile-login-number{
     position: relative;
     display: flex;

@@ -79,7 +79,7 @@ function _checkReqParams(args) {
 
 function JFuploadfile(args) {
     //准备参数
-    var url, filePath, name, header, formData, successFunc, failFunc, completeFunc, file_type;
+    var url, filePath, name, header, formData, successFunc, failFunc, completeFunc, file_type, utoken;
     if (!_checkReqParams(args)) {
         console.warn('Illegal param,input: ' + args);
     }
@@ -87,7 +87,6 @@ function JFuploadfile(args) {
     formData = args['formData'] || {};
     file_type = args['formData']['file_type'] || 1;
     formData.file_type = file_type;
-    url += json2Form(formData);
     //
     filePath = args['filePath'];
     name = args['name'];
@@ -116,16 +115,40 @@ function JFuploadfile(args) {
             args['complete'](serverRes);
         }
     };
-    wx.uploadFile({
-        url: url,
-        filePath: filePath,
-        name: name,
-        header: header,
-        formData: formData,
-        success: successFunc,
-        fail: failFunc,
-        complete: completeFunc,
-    })
+    //查出 utoken
+    wx.getStorage({
+        key: 'utoken',
+        complete: function (res) {
+            utoken = res.data;
+            if (utoken) {
+                formData['utoken'] = utoken;
+            }
+            if (!formData.devid) {
+                formData['devid'] = 'superwings-wx-app-static-devid';
+            }
+            if (!formData.app_ver) {
+                formData['app_ver'] = '1.0';
+            }
+            if (!formData.client_type) {
+                formData['client_type'] = 'wx_app';
+            }
+            //重新组织URL
+            url += json2Form(formData);
+            console.log(url);
+
+            wx.uploadFile({
+                url: url,
+                filePath: filePath,
+                name: name,
+                header: header,
+                formData: formData,
+                success: successFunc,
+                fail: failFunc,
+                complete: completeFunc,
+            })
+        }
+    });
+
 
 }
 

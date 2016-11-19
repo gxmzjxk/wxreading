@@ -197,7 +197,6 @@ Page({
         } else {
             that.setData({
                 checkMobilePass: false,
-                inputMobileNumber: number
             });
         }
     },

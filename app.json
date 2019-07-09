@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/login/login",
     "pages/flowerrank/flowerrank",
     "pages/index/index",
@@ -9,30 +9,34 @@
     "pages/result/result",
     "pages/my/my"
   ],
-  "window":{
+  "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "SuperwingsABC",
-    "navigationBarTextStyle":"#242424",
-    "backgroundColor" : "#1ECFA7",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#1ECFA7",
     "enablePullDownRefresh": true,
-    "backgroundTextStyle":"dark"
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "color": "#dddddd",
     "selectedColor": "#3cc51f",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "res/images/wechat.png",
-      "selectedIconPath": "res/images/wechatHL.png",
-      "text": "跟读"
-    }, {
-      "pagePath": "pages/my/my",
-      "iconPath": "res/images/wechat.png",
-      "selectedIconPath": "res/images/wechatHL.png",
-      "text": "我的"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "res/images/wechat.png",
+        "selectedIconPath": "res/images/wechatHL.png",
+        "text": "跟读"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "res/images/wechat.png",
+        "selectedIconPath": "res/images/wechatHL.png",
+        "text": "我的"
+      }
+    ]
   },
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }
